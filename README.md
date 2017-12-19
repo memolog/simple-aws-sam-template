@@ -83,3 +83,29 @@ You can get 'Hello World' in the response body area
 6. Click 'Invoke URL' link
 
 You can see 'Hello World' text in the page
+
+## Delete SAM Resources
+### Delete SAM stack
+```aws cloudformation delete-stack  --stack-name simple-aws-sam --profile sam```
+
+You can also delete the statck in https://console.aws.amazon.com/cloudformation/home#/stacks?filter=active
+
+### Delete S3 bucket
+
+1. Copy S3 object URI from CodeUri value in output-template.yaml (like `s3://<bucket name>/2798732c123787148fbbe49d8e189160`)
+```
+aws s3 rm <S3Uri> --profile sam
+```
+2. Delete S3 bucket
+```
+aws s3 rb s3://<bucket name> --profile sam
+```
+
+If you have objects in the bucket, the delete operation would be failed. see details: http://docs.aws.amazon.com/cli/latest/userguide/using-s3-commands.html
+
+You can also delete the s3 bucket in https://s3.console.aws.amazon.com/s3/home
+
+### Delete IAM User
+1. Open https://console.aws.amazon.com/iam/home#/users
+2. Select the checkbox of AWS user you will delete
+3. Push 'Delete user' button

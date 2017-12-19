@@ -1,0 +1,16 @@
+{
+  "name": "simple-aws-sam-sample",
+  "version": "1.0.0",
+  "description": "Super simple AWS SAM sample template",
+  "main": "lambda_function/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "api-gateway"
+  ],
+  "author": "Yutaka Yamaguchi",
+  "license": "ISC"
+}

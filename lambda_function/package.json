@@ -1,0 +1,9 @@
+{
+  "name": "simple-lambda-function",
+  "version": "1.0.0",
+  "description": "Say hello with Lambda and API Gateway",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Yutaka Yamaguchi",
+  "license": "ISC"
+}

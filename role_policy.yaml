@@ -1,0 +1,67 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+      {
+          "Effect": "Allow",
+          "Action": [
+              "cloudformation:DescribeStacks",
+              "cloudformation:DescribeStackEvents",
+              "cloudformation:CreateChangeSet",
+              "cloudformation:ExecuteChangeSet",
+              "cloudformation:DescribeChangeSet"
+          ],
+          "Resource": [
+              "arn:aws:cloudformation:*:*:stack/*",
+              "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
+          ]
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "iam:CreateRole",
+              "iam:AttachRolePolicy",
+              "iam:DetachRolePolicy",
+              "iam:DeleteRole",
+              "iam:GetRole",
+              "iam:PassRole"
+          ],
+          "Resource": [
+              "arn:aws:iam::*:role/*"
+          ]
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "s3:CreateBucket",
+              "s3:ListBucket",
+              "s3:PutObject",
+              "s3:GetObject",
+              "s3:AbortMultipartUpload",
+              "s3:ListMultipartUploadParts",
+              "s3:ListBucketMultipartUploads"
+          ],
+          "Resource": [
+              "arn:aws:s3:::*"
+          ]
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "apigateway:*"
+          ],
+          "Resource": "arn:aws:apigateway:*::/*"
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
+              "lambda:CreateFunction",
+              "lambda:DeleteFunction",
+              "lambda:GetFunctionConfiguration",
+              "lambda:AddPermission",
+              "lambda:UpdateFunctionCode",
+              "lambda:UpdateFunctionConfiguration"
+          ],
+          "Resource": "*"
+      }
+  ]
+}

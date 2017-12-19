@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Only call hello world from AWS Lambda via API Gateway.
+Resources:
+  SendFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.hello
+      Runtime: nodejs6.10
+      CodeUri: ./lambda_function
+      Policies: AWSLambdaBasicExecutionRole
+      Events:
+        PostResource:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get

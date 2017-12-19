@@ -60,11 +60,11 @@ cd ./simple-aws-sam-template
 aws cloudformation deploy --template-file output-template.yaml --stack-name simple-aws-sam --profile sam --capabilities CAPABILITY_IAM
 ```
 
-You can see the newly created stack in https://ap-northeast-1.console.aws.amazon.com/cloudformation/home#/stacks?filter=active
+You can see the newly created stack in https://console.aws.amazon.com/cloudformation/home#/stacks?filter=active
 
 ### Test Lambda function
 #### Test in Getway API console
-1. Open https://ap-northeast-1.console.aws.amazon.com/cloudformation/home#/stacks?filter=active
+1. Open https://console.aws.amazon.com/cloudformation/home#/stacks?filter=active
 2. Click the stack you created
 3. Toggle Resources and click 'ServerlessRestApi' Phisical ID (like `19cwa16e8e`)
 4. Click 'Resources' tab
@@ -75,7 +75,7 @@ You can see the newly created stack in https://ap-northeast-1.console.aws.amazon
 You can get 'Hello World' in the response body area
 
 #### Test in public Gateway API
-1. Open https://ap-northeast-1.console.aws.amazon.com/cloudformation/home#/stacks?filter=active
+1. Open https://console.aws.amazon.com/cloudformation/home#/stacks?filter=active
 2. Click the stack you created
 3. Toggle Resources and click 'ServerlessRestApi' Phisical ID (like `19cwa16e8e`)
 4. Click 'Stages' tab
